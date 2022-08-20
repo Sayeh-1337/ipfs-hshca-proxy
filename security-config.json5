@@ -4,7 +4,7 @@ module.exports = {
       value: 'public, max-age=30672000'
     },
     { name:   'server',
-      value:  'mySpecial-Server'
+      value:  'Server'
     },
     { name:   'Strict-Transport-Security',
       value:  'max-age=86400'
@@ -16,7 +16,7 @@ module.exports = {
       value:  'DENY'
     },
     { name:   'X-Powered-By',
-      value:  'Awesomeness'
+      value:  'MUSA'
     },
     { name:   'X-XSS-Protection',
       value:  '1; mode=block'

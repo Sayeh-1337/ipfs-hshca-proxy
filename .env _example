@@ -1,0 +1,5 @@
+DOMAIN=".ipfs.domain.net"
+PROXY="http://localhost:33347"
+PROXY_PORT=33347
+CID_V="QmVxccxcxxcxcxcxxxcxcxcx"
+IPFS_URL="http://localhost:8081"

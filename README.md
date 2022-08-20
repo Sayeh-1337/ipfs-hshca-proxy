@@ -24,5 +24,6 @@ To deploy this project run
 To run tests, run the following command
 
 ```bash
-  node tesing-hscha.js
+  npm test
+  curl -v --proxy 'http://localhost:31337' 'http://<hash>.ipfs.domain.net'
 ```

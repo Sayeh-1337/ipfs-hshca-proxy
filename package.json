@@ -11,12 +11,22 @@
     "dependencies": {
         "base32.js": "*",
         "base58-native": "*",
+        "chai": "^4.3.6",
+        "chai-http": "^4.3.0",
         "cids": "^1.1.9",
         "crypto": "^1.0.1",
+        "dotenv": "^16.0.1",
         "http-proxy": "*",
         "json5": "^2.2.1",
         "json5-loader": "^4.0.1",
+        "mocha": "^10.0.0",
         "multihashes": "^4.0.3",
-        "multihashing-async": "^2.1.4"
+        "multihashing-async": "^2.1.4",
+        "superagent-proxy": "^3.0.0"
+    },
+    "scripts": {
+        "test": "mocha",
+        "start": "node app.js",
+        "dev": "node app.js"
     }
 }

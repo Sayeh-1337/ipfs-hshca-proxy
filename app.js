@@ -11,11 +11,11 @@ const http      = require('http')
 const base32    = require('base32.js')
 const base58    = require('base58-native')
 const proxy     = httpProxy.createProxyServer()
-const multihashing = require('multihashes')
-const { equals } = require('uint8arrays/equals')
+require('dotenv').config()
+//const { equals } = require('uint8arrays/equals')
 const CID = require('cids')
 const security_default = require('./security-config.json5');
-
+const port = process.env.PROXY_PORT
 proxy.on('error', function(e) {
   console.log('proxy error: '+e)
 })
@@ -34,6 +34,7 @@ http.createServer(function(req, res) {
 
   try {
     var hshca = req.headers.host.match(/^(.+)\.ipfs\.domain\.net$/i)[1]
+    console.log(hshca)
   } catch(e) {
     console.log(e)
     hshcaRegexFailure = true
@@ -49,9 +50,9 @@ http.createServer(function(req, res) {
     let cid = new CID(0, 'dag-pb', multihash)
     let ipfsHash = cid.toString()
     console.log(ipfsHash)
-
-    proxy.web(req, res, { target: 'http://127.0.0.1:8080/ipfs/'+ipfsHash })
+    let ipfsUrl = process.env.IPFS_URL || "http://127.0.0.1:8080/ipfs/" 
+    proxy.web(req, res, { target: ipfsUrl+ipfsHash })
   }
-}).listen(31337, '0.0.0.0')
+}).listen(port, '0.0.0.0')
 
-console.log('Server running')
+console.log('Server running on Port:', port.toString())

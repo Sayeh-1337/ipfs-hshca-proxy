@@ -12,10 +12,10 @@ const mh = multihashing.encode(bytes, 'sha2-256')
 console.log(mh)
 
 var encoder = new base32.Encoder({ type: "rfc4648" })
-var multihash_en = encoder.write(mh).finalize()
-console.log(multihash_en.toLowerCase())
+var multihashEn = encoder.write(mh).finalize()
+console.log(multihashEn.toLowerCase())
 
 var decoder = new base32.Decoder({ type: "rfc4648" })
-var multihash_dc= decoder.write(multihash_en).finalize()
-console.log(multihash_dc)
-console.log(equals(mh, multihash_dc));
+var multihashDc= decoder.write(multihashEn).finalize()
+console.log(multihashDc)
+console.log(equals(mh, multihashDc));
