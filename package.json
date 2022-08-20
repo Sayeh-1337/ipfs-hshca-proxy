@@ -3,10 +3,10 @@
     "description": "Quick-up hshca proxy for IPFS",
     "version": "0.0.1",
     "main": "app.js",
-    "author": "Kyle Drake <kyle@neocities.org>",
+    "author": "Muhammad El-Sayeh <mu.elsayeh@gmail.com>",
     "repository": {
         "type": "git",
-        "url": "https://github.com/neocities/hshca-proxy.git"
+        "url": "https://github.com/Sayeh-1337/ipfs-hshca-proxy.git"
     },
     "dependencies": {
         "base32.js": "*",
